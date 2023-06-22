@@ -1,0 +1,254 @@
+/*css is strictly presentational, it varies from developer to developer, 
+
+h1{
+    color:green;
+}
+/* css contains a selector , the property and the value */
+body{
+    background-color: lightgrey;
+    color:darkblue ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    
+    /* short way to do the above is;*/
+ font: normal 18px Arial, Helvetica, sans-serif;
+ 
+
+ line-height: 1.6em;
+ margin:0;
+}
+/* in font-weight one can also use numbers eg 400 or bold
+/*in css we can use web safe fonts, tat means we dont hae to import he fonts.
+/you can otherwise choose to import fonts from google..etc
+/*there are different ways to represent colors..that is..
+color names, HTML5 color names , hexadecimal and RGB*/
+
+
+
+
+/* these are the global link styles*/
+a{
+    text-decoration:none ;
+    color: black;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: green;
+}
+
+a:visited{
+    color: black;
+}
+
+.container{
+    width:80%  ;
+    margin: auto;
+}
+
+.button{
+    background-color: lightgreen;
+    color: black;
+    padding: 10px 15px;
+    border:none;
+} 
+
+.button:hover{
+    background: red;
+    color: white;
+}
+
+.clr{
+    clear: both;
+}
+
+ /*when dealing with containers , it is most adviced to use percentge
+ instead of px sot aht the page is responsive */   
+
+ /*to help you understand  the css structure better, we use a nbox model
+ where the middle containd the content, that is the writings... the 
+ there is padding which is the space between the border and the content
+ then finally, we have the margin which is the space outside the boarder
+
+ for the margin, we have 
+ top
+ bottom
+ right 
+ left
+ to easen your work, we can have all the four in one statement, that is
+ margin:5px 10px 5px 10px that is top, right, bottom , left
+ if the top and bottom are the same and the left and right are also the same
+ margin 5px 10px */
+
+
+.box1{
+    background-color: bisque;
+    color:rgb(7, 7, 160);
+
+    border-right:5px darkblue solid;
+    border-left:5px darkblue solid;
+    border-top:5px darkblue solid;
+    border-bottom:5px darkblue solid;
+
+/*same as above*/
+    border:5px darkblue solid;
+/* if you want to change the border width*/
+border-width: 3px;
+border-bottom-width: 10px;
+border-top-style: dotted; /*there are amny border styles eg, dotted, dashed,double etc.*/
+
+border:5px darkblue solid;
+
+/*padding*/
+padding-top: 20px;
+padding-bottom:20px ;
+padding-right:20px ;
+padding-left:20px ;
+
+/*same as above*/
+padding: 20px;/* this is a shorter way if the padding is gonna be 
+the same across*/
+margin-top: 20px ;
+margin: 20px;/* this will put a 20 px margin all around*/
+margin: 20px 0;/*this 20px at the top and bottom and no
+ margin on the right and left*/
+
+}
+
+.box1 h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 800;
+    font-style:italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+.box2{
+    border: 3px double darkgreen;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.categories{
+border: 1px brown solid ;
+padding: 10px;
+border-radius: 15px;/*border radius gives the border rounded corners*/
+}
+
+.categories h2{
+    text-align: center;
+}
+
+.categories ul{
+    padding: 0;
+    list-style: square;
+    list-style: none;
+}
+
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: dotted 1px gray;
+
+}
+ 
+.myForm{
+    padding: 20px;
+}
+
+.myForm.formGroup{
+    padding-bottom: 15px;
+}
+
+.myForm label{
+    display: block;
+}
+
+.myForm input[type="text"], .myForm textarea{
+    padding:8px;
+    width:100%;
+}
+
+/*alignment and floating*/
+.block{
+    float: left;
+    width: 33.3%;
+    border: 1px solid black ;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#mainBlock{
+    float: left;
+    width: 70%;
+}
+#sideBar{
+    float: right;
+    width: 30%;
+    background-color: white;
+    color: gray;
+    padding: 15px;
+    box-sizing: border-box;
+}
+/*positioning in css*/
+
+/*absolute- allows us to target whatever position we want inside the relative element */
+/*relative -falls relative to its normal position and can be pushed to 
+whenever we want like top,right left bottom.*/
+/*inherit - this will ineherit the property of the parent element */
+/*static - default position*/
+/*fixed - fixed position is fixed to the browser window so no matter how much you scroll
+ down it is goiing to remain in the same position */
+/*initial - this sets the property to its default value */
+.pBox{
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 30px;
+    position: relative; 
+    background-image:url('../css images/light.jpg') ;
+    background-position: 100px 100px;/*it pushes the image over 100px and
+    down 500px*/
+    background-repeat: no-repeat;/* it sets the background so that
+    it does not repeat itself*/
+    background-position: center bottom;/*one can either use px orthis
+    kind of positioning*/ 
+}
+
+.pBox h1{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.pBox h2{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+ 
+.fix-me{
+    position: fixed ;
+    top: 400px  ;
+}
+
+.my-list li:first-child{
+    background: red;
+}
+ 
+.my-list li:last-child{
+    background: blue;
+}
+ 
+.my-list li:nth-child(5){
+    background: yellow;
+}
+ 
+.my-list li:nth-child(even){
+    background: grey;
+}
+ 
